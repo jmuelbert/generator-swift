@@ -3,17 +3,16 @@
   "version": "0.0.3",
   "description": "Yeoman generator for opensource swift projects",
   "license": "Apache-2.0",
-  "main": "app/index.js",  
-  "repository": "jmuelbert/generator-swift",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmuelbert/generator-swift.git"
+  },
   "contributors": [
-      {
-          "name": "Jürgen Mülbert",
-          "email": " ",
-          "url": "https://github.com/jmuelbert"
-      }
+    "Jürgen Mülbert < > (https://github.com/jmuelbert)"
   ],
   "engines": {
-      "node": ">=0.10.0"
+    "node": ">=0.10.0"
   },
   "keywords": [
     "yeoman-generator",
@@ -57,5 +56,13 @@
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jmuelbert/generator-swift/issues"
+  },
+  "homepage": "https://github.com/jmuelbert/generator-swift#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": "Jürgen Mülbert"
 }

@@ -1,0 +1,61 @@
+{
+  "name": "generator-swift",
+  "version": "0.0.3",
+  "description": "Yeoman generator for opensource swift projects",
+  "license": "Apache-2.0",
+  "main": "app/index.js",  
+  "repository": "jmuelbert/generator-swift",
+  "contributors": [
+      {
+          "name": "Jürgen Mülbert",
+          "email": " ",
+          "url": "https://github.com/jmuelbert"
+      }
+  ],
+  "engines": {
+      "node": ">=0.10.0"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "swift"
+  ],
+  "files": [
+    "app"
+  ],
+  "dependencies": {
+    "chai": "^3.5.0",
+    "chalk": "^1.0.0",
+    "findup-sync": "^0.3.0",
+    "nconf": "^0.8.2",
+    "vs_projectname": "^1.0.2",
+    "yeoman-generator": "^0.21.1",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "yeoman-assert": "^2.0.0",
+    "eslint-config-xo-space": "^0.7.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0",
+    "path": "^0.12.7",
+    "mkdirp": "^0.5.1",
+    "lodash": "^4.0.1",
+    "deep-extend": "^0.4.1",
+    "inquirer-npm-name": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  }
+}

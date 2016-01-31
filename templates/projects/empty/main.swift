@@ -1,3 +1,10 @@
+/*
+ * <%= swiftProject %>
+ *
+ */
+ 
+ // TODO: Add Copyright and License
+ 
 
-
-print("Hello <%= swiftProject %>!")
+/// Prints in the console Hello, <%= swiftProject %> 
+print("Hello, <%= swiftProject %>!")

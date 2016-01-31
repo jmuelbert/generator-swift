@@ -93,14 +93,15 @@ var SwiftGenerator = yeoman.generators.Base.extend({
     },
           
     writing:  function() {
+        this.sourceRoot(path.join(__dirname, './templates/projects'));
+        
         switch(this.type) {
             case 'empty':
                 this.sourceRoot(path.join(__dirname, '../templates/projects/' + this.type));
                 this.copy(this.sourceRoot() + '/../../gitignore', this.applicationName + '/.gitignore');
                 this.template(this.sourceRoot() + '/Package.swift', this.applicationName + '/Package.swift', this.templatedata);
                 this.template(this.sourceRoot() + '/project.json', this.applicationName + '/project.json', this.templatedata);
-                this.template(this.sourceRoot() + '/main.swift', this.applicationName + '/Sources/' + 
-                    this.applicationName + '.swift', this.templatedata);
+                this.template(this.sourceRoot() + '/main.swift', this.applicationName + '/Sources/main.swift', this.templatedata);
                 break;
                 
             case 'console':
@@ -108,19 +109,19 @@ var SwiftGenerator = yeoman.generators.Base.extend({
                 this.fs.copy(this.sourceRoot() + '/../../gitignore', this.applicationName + '/.gitignore');
                 this.fs.copyTpl(this.sourceRoot() + '/Package.swift', this.applicationName + '/Package.swift', this.templatedata);
                 this.fs.copyTpl(this.sourceRoot() + '/project.json', this.applicationName + '/project.json', this.templatedata);
-                this.fs.copyTpl(this.sourceRoot() + 'main.swift', this.applicationName + '/Sources/' + 
-                    this.applicationName + '.swift', this.templatedata);
-                this.fs.copyTpl(this.templatePath('README.MD'), this.applicationName + '/README.md');      
+                this.fs.copyTpl(this.sourceRoot() + '/main.swift', this.applicationName + '/Sources/main.swift', this.templatedata);
+                this.fs.copyTpl(this.templatePath('README.md'), this.applicationName + '/README.md');      
                 break;
                 
             case 'library':
-               this.sourceRoot(path.join(__dirname, '../templates/projects/' + this.type));
+                console.log(this.templatePath());   
+                this.sourceRoot(path.join(__dirname, '../templates/projects/' + this.type));
                 this.fs.copy(this.sourceRoot() + '/../../gitignore', this.applicationName + '/.gitignore');
                 this.fs.copyTpl(this.sourceRoot() + '/Package.swift', this.applicationName + '/Package.swift', this.templatedata);
                 this.fs.copyTpl(this.sourceRoot() + '/project.json', this.applicationName + '/project.json', this.templatedata);
-                this.fs.copyTpl(this.sourceRoot() + 'main.swift', this.applicationName + '/Sources/' + 
+                this.fs.copyTpl(this.sourceRoot() + '/library.swift', this.applicationName + '/Sources/' + 
                     this.applicationName + '.swift', this.templatedata);
-                this.fs.copyTpl(this.templatePath('README.MD'), this.applicationName + '/README.md');      
+                this.fs.copyTpl(this.templatePath('README.md'), this.applicationName + '/README.md');      
                 break;
               
             default:

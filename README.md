@@ -1,25 +1,23 @@
 # generator-swift [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > A generator for opensource swift
 
-## Installation
+## Getting Started
+ - Dependencies
+    - Node.js: `brew install node` for OS X, `choco install nodejs`for Windows OS
+    - Yeoman: npm install -g yo
+ - Install: npm install -g generator-swift
+ 
+## Usage
+ - yo swift shows a wizard for generating a new swift app or library
 
-First, install [Yeoman](http://yeoman.io) and generator-swift using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+## Template projects
 
-```bash
-npm install -g yo
-npm install -g generator-swift
-```
+Full, template based projects available in generator:
 
-Then generate your new project:
-
-```bash
-yo swift
-```
-
-## Getting To Know Yeoman
-
-Yeoman has a heart of gold. He&#39;s a person with feelings and opinions, but he&#39;s very easy to work with. If you think he&#39;s too opinionated, he can be easily convinced. Feel free to [learn more about him](http://yeoman.io/).
-
+ - Empty Application
+ - Console Application
+ - Class Library
+ 
 ## License
 
 Apache-2.0 © [Jürgen Mülbert](https:/github.com/jmuelbert/generator-swift)

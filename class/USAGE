@@ -1,0 +1,8 @@
+Description:
+    Create a new Swift Class file
+   
+Example:
+    yo swift:Class filename
+    
+    This will create:
+        filename.swift

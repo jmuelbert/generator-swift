@@ -19,7 +19,7 @@ function makeName(name) {
     return name;
 }
 
-var SwiftGenerator = yeoman.generators.Base.extend({
+var SwiftGenerator = yeoman.Base.extend({
     
     // The name 'constructor' is important here
     constructor: function() {
@@ -36,7 +36,7 @@ var SwiftGenerator = yeoman.generators.Base.extend({
         this.templatedata = {};
     },
     askFor: function () {
-        var done =this.async();
+        var done = this.async();
         
         var prompts = [{
             type: 'list',

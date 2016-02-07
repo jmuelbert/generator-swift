@@ -18,6 +18,12 @@ Full, template based projects available in generator:
  - Console Application
  - Class Library
  
+ Subcommand available:
+ 
+    - swift:class - Create a new class template in the Sources Directory
+        - swift:class <name> Optional the new class name
+        - swift:class path/<name> write the template in the subdirectory
+        
 ## License
 
 Apache-2.0 © [Jürgen Mülbert](https:/github.com/jmuelbert/generator-swift)

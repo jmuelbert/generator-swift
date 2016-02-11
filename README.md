@@ -4,8 +4,8 @@
 ## Getting Started
  - Dependencies
     - Node.js: `brew install node` for OS X, `choco install nodejs`for Windows OS
-    - Yeoman: npm install -g yo
- - Install: npm install -g generator-swift
+    - Yeoman: `npm install -g yo`
+ - Install: `npm install -g generator-swift`
  
 ## Usage
  - yo swift shows a wizard for generating a new swift app or library

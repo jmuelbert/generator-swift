@@ -41,11 +41,7 @@
     "gulp-plumber": "^1.0.0",
     "gulp-nsp": "^2.1.0",
     "gulp-coveralls": "^0.1.0",
-    "path": "^0.12.7",
-    "mkdirp": "^0.5.1",
-    "lodash": "^4.0.1",
-    "deep-extend": "^0.4.1",
-    "inquirer-npm-name": "^1.0.0"
+    "path": "^0.12.7"
   },
   "eslintConfig": {
     "extends": "xo-space",

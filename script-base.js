@@ -1,32 +1,33 @@
 'use strict';
 
-const util   = require('util');
-const path   = require('path');
+const util = require('util');
+const path = require('path');
 const yeoman = require('yeoman-generator');
-const chalk  = require('chalk');
+const chalk = require('chalk');
 
 let NamedGenerator = module.exports = function NamedGenerator() {
-    yeoman.NamedBase.apply(this, arguments);
-    this.sourceRoot(path.join(__dirname, './templates'));
-    
-    this.namespace = function() {
-        return require('./configuration').getNamespace(this.fs);
-    }.bind(this);
+  yeoman.NamedBase.apply(this, arguments);
+  this.sourceRoot(path.join(__dirname, './templates'));
+
+  this.namespace = function () {
+    return require('./configuration').getNamespace(this.fs);
+  }.bind(this);
 };
 
 util.inherits(NamedGenerator, yeoman.generators.NamedBase);
 
-NamedGenerator.prototype.generateTemplateFile = function(templateFile, extension, templateData) {
-    // the target file is created from *name* property
-    let targetFile = this.createTargetFile(extension);
-    this.log('You called the swift subgenerator with the arg ' + chalk.green(this.arguments[0] || targetFile));
-    let swiftTargetFile = path.join('Sources', targetFile);
-    if (templateData !== null) {
-        this.fs.copyTpl(this.templatePath(templateFile), this.destinationPath(swiftTargetFile), templateData);
-    } else {
-        this.fs.copyTpl(this.templatePath(templateFile), this.destinationPath(swiftTargetFile));
-    }
-    this.log(chalk.green(swiftTargetFile) + ' created.');
+NamedGenerator.prototype.generateTemplateFile = function (templateFile, extension, templateData) {
+  // the target file is created from *name* property
+  let targetFile = this.createTargetFile(extension);
+  this.log('You called the swift subgenerator with the arg ' + chalk.green(this.arguments[0] || targetFile));
+  let swiftTargetFile = path.join('Sources', targetFile);
+  if (templateData !== null) {
+    this.fs.copyTpl(this.templatePath(templateFile), this.destinationPath(swiftTargetFile), templateData);
+  }
+  if (templateData === null) {
+    this.fs.copyTpl(this.templatePath(templateFile), this.destinationPath(swiftTargetFile));
+  }
+  this.log(chalk.green(swiftTargetFile) + ' created.');
 };
 
 /**
@@ -38,15 +39,15 @@ NamedGenerator.prototype.generateTemplateFile = function(templateFile, extension
  * @param {string} extension
  * @return {string} a filename based on name property and extension
  */
-NamedGenerator.prototype.createTargetFile = function(extension) {
-    let targetFile = null;
-    extension = this._normalizeExtension(extension);
-    if (path.extname(this.name) === extension) {
-        targetFile = this.name;
-    } else {
-        targetFile = this.name + extension;
-    }
-    return targetFile;
+NamedGenerator.prototype.createTargetFile = function (extension) {
+  let targetFile = null;
+  extension = this._normalizeExtension(extension);
+  if (path.extname(this.name) === extension) {
+    targetFile = this.name;
+  } else {
+    targetFile = this.name + extension;
+  }
+  return targetFile;
 };
 
 /**
@@ -56,12 +57,12 @@ NamedGenerator.prototype.createTargetFile = function(extension) {
  * @param {string} exetension
  * @return {string} class name based on name property
  */
-NamedGenerator.prototype.classNameWithoutExtension = function(extension) {
-    extension = this._normalizeExtension(extension);
-    if (path.extname(this.name) === extension) {
-        return path.basename(this.name, extension);
-    }
-    return path.basename(this.name);
+NamedGenerator.prototype.classNameWithoutExtension = function (extension) {
+  extension = this._normalizeExtension(extension);
+  if (path.extname(this.name) === extension) {
+    return path.basename(this.name, extension);
+  }
+  return path.basename(this.name);
 };
 
 /**
@@ -69,10 +70,9 @@ NamedGenerator.prototype.classNameWithoutExtension = function(extension) {
  * @param {string} extension
  * @return {string} normalized extension
  */
-NamedGenerator.prototype._normalizeExtension = function(extension) {
-    if (extension && extension.charAt(0) !== '.') {
-        extension = '.' + extension;
-    }
-    return extension;
+NamedGenerator.prototype._normalizeExtension = function (extension) {
+  if (extension && extension.charAt(0) !== '.') {
+    extension = '.' + extension;
+  }
+  return extension;
 };
- 

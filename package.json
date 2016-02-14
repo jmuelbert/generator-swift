@@ -1,6 +1,6 @@
 {
   "name": "generator-swift",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Yeoman generator for opensource swift projects",
   "license": "Apache-2.0",
   "main": "app/index.js",
@@ -15,39 +15,40 @@
     "node": ">=0.10.0"
   },
   "keywords": [
-    "yeoman-generator",
-    "swift"
+    "swift",
+    "yeoman-generator"
   ],
   "files": [
     "app"
   ],
   "dependencies": {
     "chai": "^3.5.0",
-    "chalk": "^1.0.0",
+    "chalk": "^1.1.1",
     "findup-sync": "^0.3.0",
-    "nconf": "^0.8.2",
+    "nconf": "^0.8.4",
     "vs_projectname": "^1.0.2",
     "yeoman-generator": "^0.22.5",
-    "yosay": "^1.0.2"
+    "yosay": "^1.1.0"
   },
   "devDependencies": {
-    "yeoman-assert": "^2.0.0",
-    "eslint-config-xo-space": "^0.8.0",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^1.0.0",
+    "yeoman-assert": "^2.1.1",
+    "yeoman-test": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-babel-istanbul": "^0.11.0",
     "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-istanbul": "^0.10.3",
-    "gulp-mocha": "^2.0.0",
+    "gulp-jasmine": "1.0.0",
+    "gulp-jsdoc3": "^0.1.0",
+    "gulp-jshint": "2.0.0",
     "gulp-plumber": "^1.0.0",
     "gulp-nsp": "^2.1.0",
-    "gulp-coveralls": "^0.1.0",
-    "path": "^0.12.7"
-  },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "mocha": true
-    }
+    "gulp-coverage": "^0.3.38",
+    "gulp-spawn-mocha": "^2.2.1",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "merge-stream": "^1.0.0",
+    "path": "^0.12.7",
+    "run-sequence": "^1.1.5"
   },
   "scripts": {
     "prepublish": "gulp prepublish",

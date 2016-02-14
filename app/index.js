@@ -12,7 +12,7 @@ const projectName = require('vs_projectname');
 /**
  * The SwiftGenerator
  */
-var SwiftGenerator = yeoman.Base.extend({
+let SwiftGenerator = yeoman.Base.extend({
   /**
    * The constructor for the yeoman generator
    *
@@ -20,7 +20,7 @@ var SwiftGenerator = yeoman.Base.extend({
    */
   constructor: function () {
     // Calling the super constructor is important sa our generator is correctly set up
-    yeoman.generators.Base.apply(this, arguments);
+    yeoman.Base.apply(this, arguments);
   },
 
   /**
@@ -39,9 +39,9 @@ var SwiftGenerator = yeoman.Base.extend({
     * Ask the User what
     */
   askFor: function () {
-    var done = this.async();
+    const done = this.async();
 
-    var prompts = [{
+    const prompts = [{
       type: 'list',
       name: 'type',
       message: 'What type of project do you want create?',
@@ -67,8 +67,8 @@ var SwiftGenerator = yeoman.Base.extend({
   * Ask the user for name
   */
   askForName: function () {
-    var done = this.async();
-    var app = '';
+    const done = this.async();
+    let app = '';
 
     switch (this.type) {
       case 'empty':
@@ -87,7 +87,7 @@ var SwiftGenerator = yeoman.Base.extend({
         this.log('Unknown project type');
     }
 
-    var prompts = [{
+    const prompts = [{
       name: 'applicationName',
       message: 'What\'s the name of your swift application/library?',
       default: app
@@ -121,8 +121,10 @@ var SwiftGenerator = yeoman.Base.extend({
         this.sourceRoot(path.join(__dirname, '../templates/projects/' + this.type));
         this.fs.copy(this.sourceRoot() + '/../../gitignore', this.applicationName + '/.gitignore');
         this.fs.copyTpl(this.sourceRoot() + '/Package.swift', this.applicationName + '/Package.swift', this.templatedata);
-        this.fs.copyTpl(this.sourceRoot() + '/project.json', this.applicationName + '/project.json', this.templatedata);
         this.fs.copyTpl(this.sourceRoot() + '/main.swift', this.applicationName + '/Sources/main.swift', this.templatedata);
+        this.fs.copyTpl(this.sourceRoot() + '/project.json', this.applicationName + '/project.json', this.templatedata);
+        this.fs.copyTpl(this.sourceRoot() + '/package.json', this.applicationName + '/package.json', this.templatedate);
+        this.fs.copy(this.sourceRoot() + '/gulpfile.js', this.applicationName + '/gulpfile.js');
         this.fs.copyTpl(this.templatePath('README.md'), this.applicationName + '/README.md');
         break;
 
@@ -130,9 +132,11 @@ var SwiftGenerator = yeoman.Base.extend({
         this.sourceRoot(path.join(__dirname, '../templates/projects/' + this.type));
         this.fs.copy(this.sourceRoot() + '/../../gitignore', this.applicationName + '/.gitignore');
         this.fs.copyTpl(this.sourceRoot() + '/Package.swift', this.applicationName + '/Package.swift', this.templatedata);
-        this.fs.copyTpl(this.sourceRoot() + '/project.json', this.applicationName + '/project.json', this.templatedata);
         this.fs.copyTpl(this.sourceRoot() + '/library.swift', this.applicationName + '/Sources/' +
         this.applicationName + '.swift', this.templatedata);
+        this.fs.copyTpl(this.sourceRoot() + '/project.json', this.applicationName + '/project.json', this.templatedata);
+        this.fs.copyTpl(this.sourceRoot() + '/package.json', this.applicationName + '/package.json', this.templatedate);
+        this.fs.copy(this.sourceRoot() + '/gulpfile.js', this.applicationName + '/gulpfile.js');
         this.fs.copyTpl(this.templatePath('README.md'), this.applicationName + '/README.md');
         break;
 

@@ -1,3 +1,4 @@
+/* global process */
 const findup = require('findup-sync');
 const path = require('path');
 const abstractionsStr = '.Abstractions';
@@ -33,14 +34,19 @@ function getBaseNamespace() {
 }
 
 module.exports = {
-  // Get the namespace relative to the cwd
+  /**
+   * Get the namespace relative to the cwd
+   * 
+   * @param {string} fs
+   * @return [string} - The Namespace
+   */
   getNamespace: function (fs) {
     'use strict';
 
-    var baseNamespace = getBaseNamespace(fs);
-    var cwd = process.cwd();
-    var baseDirectory = path.resolve(path.dirname(this.getProjectJsonPath()));
-    var relativePath = path.relative(baseDirectory, cwd);
+    const baseNamespace = getBaseNamespace(fs);
+    const cwd = process.cwd();
+    const baseDirectory = path.resolve(path.dirname(this.getProjectJsonPath()));
+    const relativePath = path.relative(baseDirectory, cwd);
 
     if (relativePath) {
       return [baseNamespace].concat(relativePath.split(path.sep)).join('.');
@@ -49,16 +55,27 @@ module.exports = {
     return baseNamespace;
   },
 
+  /**
+   * Get the Path to the Project.json file
+   * 
+   * @return {string} - The Path
+   */
   getProjectJsonPath: function () {
     'use strict';
 
     return findup('project.json');
   },
 
+  /**
+   * Get the Contents of to project.json
+   * 
+   * @param {string} - fs
+   * @return {string} - the content of project.json or an emtpy string.
+   */
   getProjectJson: function (fs) {
     'use strict';
 
-    var path = module.exports.getProjectJsonPath();
+    const path = module.exports.getProjectJsonPath();
     if (!path) {
       return {};
     }
@@ -66,16 +83,27 @@ module.exports = {
     return fs.readJSON(path, {});
   },
 
+  /**
+   * Get the Path to the global.json file
+   * 
+   * @return {string} - the path
+   */
   getGlobalJsonPath: function () {
     'use strict';
 
     return findup('global.json');
   },
 
+  /**
+   * Get the Contents of to global.json
+   * 
+   * @param {string} - fs
+   * @return {string} - the content of global.json or an emtpy string.
+   */
   getGlobalJson: function (fs) {
     'use strict';
 
-    var path = module.exports.getGlobalJsonPath(path);
+    const path = module.exports.getGlobalJsonPath();
     if (!path) {
       return {};
     }

@@ -1,7 +1,11 @@
 'use strict';
 
+/**
+ * @module submodule class-generator
+ */
 const util = require('util');
 const ScriptBase = require('../script-base.js');
+
 
 let NamedGenerator = module.exports = function NamedGenerator() {
   ScriptBase.apply(this, arguments);

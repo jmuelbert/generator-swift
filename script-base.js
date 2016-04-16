@@ -7,7 +7,8 @@ const yeoman = require('yeoman-generator');
 const chalk = require('chalk');
 
 let NamedGenerator = module.exports = function NamedGenerator() {
-  yeoman.NamedBase.apply(this, arguments);
+  yeoman.Base.apply(this, arguments);
+  this.argument('name', { type: String, required: true});
   this.sourceRoot(path.join(__dirname, './templates'));
 
   this.namespace = function () {
@@ -15,7 +16,7 @@ let NamedGenerator = module.exports = function NamedGenerator() {
   }.bind(this);
 };
 
-util.inherits(NamedGenerator, yeoman.generators.NamedBase);
+util.inherits(NamedGenerator, yeoman.Base);
 
 NamedGenerator.prototype.generateTemplateFile = function (templateFile, extension, templateData) {
   // the target file is created from *name* property

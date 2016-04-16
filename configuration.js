@@ -2,6 +2,7 @@
 const findup = require('findup-sync');
 const path = require('path');
 const abstractionsStr = '.Abstractions';
+
 /**
  * getNamespace
  *

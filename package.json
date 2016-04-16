@@ -28,7 +28,11 @@
     "nconf": "^0.8.4",
     "vs_projectname": "^1.0.2",
     "yeoman-generator": "^0.22.5",
-    "yosay": "^1.1.0"
+    "yosay": "^1.1.0",
+    "node-uuid": "^1.4.7",
+    "os-name": "^1.0.3",
+    "update-notifier": "^0.6.3",
+    "string-length": "^1.0.1"
   },
   "devDependencies": {
     "yeoman-assert": "^2.1.1",

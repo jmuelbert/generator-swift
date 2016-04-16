@@ -7,7 +7,31 @@ const yeoman = require('yeoman-generator');
 const path = require('path');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const updateNotifier = require('update-notifier');
+const stringLength = require('string-length');
 const projectName = require('vs_projectname');
+const packageJSON = require('../package.json');
+
+/**
+ * Update check
+ */
+const checkForUpdates = () => {
+  const notifier = updateNotifier({
+    pkg: packageJSON
+    // ,updateCheckInterval: 1
+    // useful for debugging 
+  });
+  
+  let message = [];
+  let retVal;
+  
+  if (notifier.update) {
+    message.push("Update available: " + chalk.green.bold(notifier.update.latest) + chalk.gray(" (current: " + notifier.update.current + ")"));
+		message.push("Run " + chalk.magenta("npm install -g " + packageJSON.name) + " to update.");
+		retVal = yosay(message.join(" "), {maxLength: stringLength(message[ 0 ])});    
+  }
+  return retVal;
+};
 
 /**
  * The SwiftGenerator
@@ -28,9 +52,16 @@ let SwiftGenerator = yeoman.Base.extend({
    */
   init: function () {
     // Have swiftGenerator greet the user.
-    this.log(yosay(
-      'Welcome to the super-excellent ' + chalk.red('swift') + ' generator!'
-    ));
+    const welcomeMessage = yosay('Welcome to the super-excellent ' + chalk.red('swift') + ' generator!');
+    const updateMessage = checkForUpdates();
+    
+    // Have Yeoman greet the user
+    if (updateMessage) {
+      this.log(updateMessage);
+    } else {
+      this.log(welcomeMessage);
+    }
+    
     this.props = {};
     this.templatedata = {};
   },

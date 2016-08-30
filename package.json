@@ -1,6 +1,6 @@
 {
     "name": "generator-swift",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "description": "Yeoman generator for opensource swift projects",
     "license": "Apache-2.0",
     "main": "app/index.js",
@@ -43,7 +43,7 @@
         "gulp-exclude-gitignore": "^1.0.0",
         "gulp-jasmine": "2.4.0",
         "gulp-jsdoc3": "^0.3.0",
-        "gulp-jshint": "2.4.2",
+        "gulp-jshint": "2.0.1",
         "gulp-plumber": "^1.0.0",
         "gulp-nsp": "^2.1.0",
         "gulp-coverage": "^0.3.38",

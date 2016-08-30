@@ -9,7 +9,7 @@
  
 ## Usage
  - yo swift shows a wizard for generating a new swift app or library
-    - For using swiftlint must install this with: `brew install swiftlint`
+    - For using [swiftlint)(https://github.com/realm/SwiftLint) must install this with: `brew install swiftlint`
 
 ## Template projects
 
@@ -22,16 +22,16 @@ Full, template based projects available in generator:
  ### Additional for the Console Application and the Class Library
  
  Now its provided a gulpfile for do an lintcheck for the swiftfile's
- This is only available on OSX. Init with `npm install`
+ This is only available on macOS. Init with `npm install`
  
     - Call with `gulp`do a linkcheck and build
     - Call with `gulp lint`only the lintcheck.
  
  ## Subcommand available:
  
-    - swift:class - Create a new class template in the Sources Directory
-        - swift:class <name> The new class name
-        - swift:class path/<name> write the template in the subdirectory
+    - `swift:class` - Create a new class template in the Sources Directory
+        - `swift:class` `name` The new class name
+        - `swift:class` `path/name` write the template in the subdirectory
         
 ## License
 

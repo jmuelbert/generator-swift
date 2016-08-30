@@ -3,13 +3,15 @@
 
 ## Getting Started
  - Dependencies
-    - Node.js: `brew install node` for OS X, `choco install nodejs`for Windows OS
+    - Node.js: 
+      - `brew install node` for macOS 
+      - `choco install nodejs`for Windows OS
     - Yeoman: `npm install -g yo`
  - Install: `npm install -g generator-swift`
  
 ## Usage
  - yo swift shows a wizard for generating a new swift app or library
-    - For using [swiftlint)(https://github.com/realm/SwiftLint) must install this with: `brew install swiftlint`
+    - For using [swiftlint](https://github.com/realm/SwiftLint) must install this with: `brew install swiftlint`
 
 ## Template projects
 

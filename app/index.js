@@ -3,6 +3,7 @@
  * @module swift-generator
  */
 'use strict';
+
 const yeoman = require('yeoman-generator');
 const path = require('path');
 const chalk = require('chalk');

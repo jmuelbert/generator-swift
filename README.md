@@ -39,6 +39,7 @@ Full, template based projects available in generator:
 
 Apache-2.0 © [Jürgen Mülbert](https:/github.com/jmuelbert/generator-swift)
 
+[Return to top](#top)
 
 [npm-image]: https://badge.fury.io/js/generator-swift.svg
 [npm-url]: https://npmjs.org/package/generator-swift

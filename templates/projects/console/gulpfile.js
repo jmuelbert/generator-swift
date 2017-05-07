@@ -1,3 +1,5 @@
+// @ts-check
+
 'use strict';
 const gulp = require('gulp');
 const shell = require('shelljs');
@@ -5,14 +7,14 @@ const shell = require('shelljs');
 gulp.task('lint', () => {
     let lintcmd = '';
     let lintargs = '';
-    
+
     if (shell.which('swiftlint')) {
         lintcmd = 'swiftlint';
     } else {
         console.log('Sorry, the swiftlint tool installed');
         return;
     }
-    shell.exec(lintcmd, lintargs, function (code, stdout, stderr) {
+    shell.exec(lintcmd, lintargs, function(code, stdout, stderr) {
         console.log('Exit code:', code);
         console.log('Program output:', stdout);
         console.log('Program stderr:', stderr);
@@ -23,8 +25,8 @@ gulp.task('build', () => {
     shell.exec('swift', 'build', function(code, stdout, stderr) {
         console.log('Exit code:', code);
         console.log('Program output:', stdout);
-        console.log('Program stderr:', stderr);        
-    });    
+        console.log('Program stderr:', stderr);
+    });
 });
 
 gulp.task('default', ['lint', 'build']);

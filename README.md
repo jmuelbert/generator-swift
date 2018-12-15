@@ -1,28 +1,33 @@
-# generator-swift [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> A generator for opensource swift
+# generator-swift
+
+ [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+ 
+* A generator for opensource swift
 
 ## Getting Started
- - Dependencies
-    - Node.js: 
-      - `brew install node` for macOS 
-      - `choco install nodejs`for Windows OS
-    - Yeoman: `npm install -g yo`
- - Install: `npm install -g generator-swift`
+
+* Dependencies
+  * Node.js:
+    * `brew install node` for macOS
+    * `choco install nodejs`for Windows OS
+  * Yeoman: `npm install -g yo`
+  * Install: `npm install -g generator-swift`
  
 ## Usage
- - yo swift shows a wizard for generating a new swift app or library
-    - For using [swiftlint](https://github.com/realm/SwiftLint) must install this with: `brew install swiftlint`
+
+* `yo swift` shows a wizard for generating a new swift app or library
+* For using [swiftlint](https://github.com/realm/SwiftLint) must install this with: `brew install swiftlint`
 
 ## Template projects
 
 Full, template based projects available in generator:
 
- - Empty Application
- - Console Application
- - Class Library
- 
- ### Additional for the Console Application and the Class Library
- 
+* Empty Application
+* Console Application
+* Class Library
+
+### Additional for the Console Application and the Class Library
+
  Now its provided a gulpfile for do an lintcheck for the swiftfile's
  This is only available on macOS. Init with `npm install`
  

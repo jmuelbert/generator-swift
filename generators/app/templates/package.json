@@ -1,0 +1,28 @@
+{
+    "name": "{{applicationName}}",
+    "version": "1.0.0",
+    "description": "A generated IBM Cloud application",
+    "private": true,
+    "engines": {
+      "node": "{{nodeVersion}}"
+    },
+    "scripts": {
+      "start": "node server/server.js",
+      "debug": "node --inspect server/server.js",
+      "test": "nyc mocha",
+      "dev": "nodemon server/server.js"
+    },
+    "dependencies": {
+      "appmetrics-dash": "^3.3.2",
+      "appmetrics-prometheus": "^0.0.2",
+      "body-parser": "^1.17.2",
+      "express": "^4.15.3",
+      "log4js": "^1.1.1"
+    },
+    "devDependencies": {
+      "chai": "^4.0.0",
+      "nodemon": "^1.12.1",
+      "mocha": "^3.4.2",
+      "nyc": "^10.3.2"
+    }
+  }

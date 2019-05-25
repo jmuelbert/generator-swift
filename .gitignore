@@ -7,4 +7,6 @@ npm-debug.log
 typings
 **/project.lock.json
 .lock
+.vscode/
 .log
+*.bak

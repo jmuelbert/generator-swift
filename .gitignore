@@ -10,3 +10,4 @@ typings
 .vscode/
 .log
 *.bak
+package-lock.json

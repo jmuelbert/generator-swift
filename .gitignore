@@ -12,3 +12,4 @@ yarn.lock
 .log
 *.bak
 package-lock.json
+dist

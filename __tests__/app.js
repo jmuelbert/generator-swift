@@ -10,17 +10,19 @@ jest.mock("npm-name", () => () => Promise.resolve(true));
 describe("generator:app", () => {
   describe("defaults", () => {
     beforeEach(() => {
-      return helpers.run(path.join(__dirname, "../app")).withPrompts({
-        name: "generator-swift",
-        description: "Yeoman generator for opensource swift projects",
-        homepage: "https://github.com/jmuelbert/generator-swift#readme",
-        githubAccount: "jmuelbert",
-        authorName: "Jürgen Mülbert",
-        authorEmail: "juergen.muelbert@gmail.com",
-        authorUrl: "https://github.com/jmuelbert",
-        keywords: [],
-        license: "Apache-2.0"
-      });
+      return helpers
+        .run(path.join(__dirname, "../generators/app"))
+        .withPrompts({
+          name: "generator-swift",
+          description: "Yeoman generator for opensource swift projects",
+          homepage: "https://github.com/jmuelbert/generator-swift#readme",
+          githubAccount: "jmuelbert",
+          authorName: "Jürgen Mülbert",
+          authorEmail: "juergen.muelbert@gmail.com",
+          authorUrl: "https://github.com/jmuelbert",
+          keywords: [],
+          license: "Apache-2.0"
+        });
     });
 
     it("created and CD into a folder named like the generator", () => {
@@ -43,7 +45,7 @@ describe("generator:app", () => {
     it("fills package.json with correct information", () => {
       // eslint-disable-next-line new-cap
       assert.JSONFileContent("package.json", {
-        name: "generator-temp",
+        name: "generator-swift",
         dependencies: {
           "yeoman-generator":
             generatorGeneratorPkg.dependencies["yeoman-generator"],

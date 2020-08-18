@@ -62,7 +62,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "fs-extra": "^8.1.0",
     "handlebars": "^4.5.3",
-    "jest": "^24.9.0",
+    "jest": "^26.4.0",
     "nsp": "^3.2.1",
     "prettier": "^1.18.2",
     "yeoman-assert": "^3.1.1",

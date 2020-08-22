@@ -42,7 +42,7 @@
     "deep-extend": "^0.6.0",
     "generator-node": "^2.6.0",
     "inquirer-npm-name": "^3.0.0",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.2.11",
     "lodash": "^4.17.15",
     "mkdirp": "^1.0.4",
     "superb": "^4.0.0",

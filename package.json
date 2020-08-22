@@ -57,7 +57,7 @@
     "coveralls": "^3.0.4",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-config-xo-space": "^0.22.0",
+    "eslint-config-xo-space": "^0.24.0",
     "eslint-plugin-mocha": "6.2.2",
     "eslint-plugin-prettier": "^3.1.0",
     "fs-extra": "^8.1.0",

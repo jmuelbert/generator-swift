@@ -64,7 +64,7 @@
     "handlebars": "^4.5.3",
     "jest": "^26.4.0",
     "nsp": "^3.2.1",
-    "prettier": "^1.18.2",
+    "prettier": "^2.1.0",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^3.0.0"
   },

@@ -2,9 +2,9 @@
  * <%= swiftProject %>
  *
  */
- 
+
  // TODO: Add Copyright and License
- 
+
  /*
   * For example, you can remove
  #if os(Linux)
@@ -14,12 +14,12 @@ import Darwin
 #endif
  */
 
-/// A sample greeting function. 
+/// A sample greeting function.
 ///
 /// - Parameters:
 ///     - name: The greeting String
 func greeting(name: String) {
-    print("Hello, \(name) !")    
+    print("Hello, \(name) !")
 }
 
 

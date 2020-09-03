@@ -20,7 +20,7 @@
   "nocomma": true,
   "nonbsp": true,
   "nonew": true,
-  "singleGroups": true,  
+  "singleGroups": true,
   "undef": true,
   "unused": true,
   "mocha": true,

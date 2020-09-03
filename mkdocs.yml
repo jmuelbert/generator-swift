@@ -1,0 +1,6 @@
+site_name: Clear-Directory
+repo_url: https://github.com/jmuelbert/generator-swift
+theme: readthedocs
+pages:
+  - Home: README.md
+

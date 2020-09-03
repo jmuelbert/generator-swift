@@ -1,42 +1,11 @@
 {
-  "name": "generator-swift",
-  "version": "0.1.0",
-  "description": "Yeoman generator for opensource swift projects",
-  "author": "Jürgen Mülbert",
-  "license": "Apache-2.0",
-  "main": "app/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jmuelbert/generator-swift.git"
-  },
-  "scripts": {
-    "test": "jest",
-    "format": "prettier generators/**/*.js test/**/*.js --write",
-    "lint": "eslint generators/**/*.js test/**/*.js --fix",
-    "precommit": "lint-staged && npm test",
-    "prepublishOnlyOnly": "lint-staged && npm test",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  "author": "J\u00fcrgen M\u00fclbert",
+  "bugs": {
+    "url": "https://github.com/jmuelbert/generator-swift/issues"
   },
   "contributors": [
-    "Jürgen Mülbert < > (https://github.com/jmuelbert)"
+    "J\u00fcrgen M\u00fclbert < > (https://github.com/jmuelbert)"
   ],
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "keywords": [
-    "yeoman-generator",
-    "swift"
-  ],
-  "files": [
-    "app"
-  ],
-  "lint-staged": {
-    "*.js": [
-      "npm run format",
-      "npm run lint",
-      "git add"
-    ]
-  },
   "dependencies": {
     "chalk": "^4.1.0",
     "deep-extend": "^0.6.0",
@@ -50,6 +19,7 @@
     "yo": "^3.1.1",
     "yosay": "^2.0.2"
   },
+  "description": "Yeoman generator for opensource swift projects",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
@@ -68,17 +38,47 @@
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^3.0.0"
   },
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "files": [
+    "app"
+  ],
+  "homepage": "https://github.com/jmuelbert/generator-swift#readme",
   "jest": {
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "templates"
     ]
   },
-  "bugs": {
-    "url": "https://github.com/jmuelbert/generator-swift/issues"
+  "keywords": [
+    "yeoman-generator",
+    "swift"
+  ],
+  "license": "Apache-2.0",
+  "lint-staged": {
+    "*.js": [
+      "npm run format",
+      "npm run lint",
+      "git add"
+    ]
   },
-  "homepage": "https://github.com/jmuelbert/generator-swift#readme",
-  "directories": {
-    "test": "test"
-  }
+  "main": "app/index.js",
+  "name": "generator-swift",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmuelbert/generator-swift.git"
+  },
+  "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "format": "prettier generators/**/*.js test/**/*.js --write",
+    "lint": "eslint generators/**/*.js test/**/*.js --fix",
+    "precommit": "lint-staged && npm test",
+    "prepublishOnlyOnly": "lint-staged && npm test",
+    "test": "jest"
+  },
+  "version": "0.1.0"
 }

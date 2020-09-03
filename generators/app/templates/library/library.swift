@@ -2,22 +2,22 @@
  * <%= swiftProject %>
  *
  */
- 
+
  // TODO: Add Copyright and License
- 
+
  #import Foundation
- 
+
  /// The <%= swiftProject %>
  class <%= swiftProject %> {
      /**
-        Initialize the <%= swiftProject %> class 
-        
+        Initialize the <%= swiftProject %> class
+
         - Parameters:
-            - xyz: 
-            
+            - xyz:
+
         - Returns: A beautiful new <%= swiftProject %> class
      */
      init(xyz: String) {
-            
-     }     
+
+     }
  }

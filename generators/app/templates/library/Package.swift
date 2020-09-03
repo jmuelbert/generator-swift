@@ -6,9 +6,9 @@
 import PackageDescription
 
 /**
- 
+
     The Package Definition for <%= swiftProject %>
-    
+
     You can import local and remote dependencies.
     see at: https://swift.org/package-manager/
 */

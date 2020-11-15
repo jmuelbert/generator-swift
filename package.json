@@ -1,10 +1,10 @@
 {
-  "author": "J\u00fcrgen M\u00fclbert",
+  "author": "Jürgen Mülbert",
   "bugs": {
     "url": "https://github.com/jmuelbert/generator-swift/issues"
   },
   "contributors": [
-    "J\u00fcrgen M\u00fclbert < > (https://github.com/jmuelbert)"
+    "Jürgen Mülbert < > (https://github.com/jmuelbert)"
   ],
   "dependencies": {
     "chalk": "^4.1.0",

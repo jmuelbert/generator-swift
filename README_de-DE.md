@@ -1,6 +1,6 @@
-# generator-swift
+# Generator-Swift
 
-A generator for opensource swift
+Ein Generator für Open-Source-Swift
 
 ---
 
@@ -15,58 +15,58 @@ A generator for opensource swift
 [![Help wanted issues](https://img.shields.io/github/issues/jmuelbert/generator-swift/help%20wanted)](https://github.com/jmuelbert/generator-swift/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 
 
-[Features](https://github.com/jmuelbert/generator-swift) | [Documentation](https://jmuelbert.github.io/generator-swift/) | [Changelog](CHANGELOG.md) | [Contributing](CONTRIBUTING.md) | [FAQ](https://github.com/jmuelbert/generator-swift/wiki/FAQ) | [deutsch](README_de-DE.md)
+[Funktionen](https://github.com/jmuelbert/generator-swift) | [Dokumentation](https://jmuelbert.github.io/generator-swift/) | [Änderungsprotokoll](CHANGELOG.md) | [Beitragen](CONTRIBUTING_de-DE.md) | [FAQ](https://github.com/jmuelbert/generator-swift/wiki/FAQ) | [english](README.md)
 
-## Getting Started
+## Erste Schritte
 
-- Dependencies
-  - Install Node.js on macOS
+- Abhängigkeiten
+  - Installieren von Node.js auf MacOS
 
     ```bash
-      install node
+      Knoten installieren
     ```
 
-  - Install Node.js on Windows OS
+  - Installieren von Node.js auf Windows-Betriebssystem
 
     ```cmd
        choco install nodejs
     ```
 
   - Yeoman: ``` npm install -g yo ```
-  - Install: ``` npm install -g generator-swift ```
+  - Installieren: ``` npm install -g generator-swift ```
 
-## Usage
+## Verwendung
 
-- `yo swift` shows a wizard for generating a new swift app or library
-- For using [swiftlint](https://github.com/realm/SwiftLint) must install this with: `brew install swiftlint`
+- `yo swift` zeigt einen Assistenten zur Erstellung einer neuen swift-Anwendung oder Bibliothek
+- Für die Verwendung von [swiftlint](https://github.com/realm/SwiftLint) muss dies mit installiert werden: `brauen Sie swiftlint installieren`.
 
-## Template projects
+## Vorlage-Projekte
 
-Full, template based projects available in generator:
+Vollständige, vorlagenbasierte Projekte im Generator verfügbar:
 
-- Empty Application
-- Console Application
-- Class Library
+- Leere Anwendung
+- Konsolen-Anwendung
+- Klassenbibliothek
 
-### Additional for the Console Application and the Class Library
+### Zusätzlich für die Konsolenanwendung und die Klassenbibliothek
 
- Now its provided a gulpfile for do an lintcheck for the swiftfile's
- This is only available on macOS. Init with `npm install`
+ Jetzt ist es ein Gulpfile für eine Fusselkontrolle für die Swiftfile's
+ Dies ist nur unter MacOS verfügbar. Einleiten mit `npm install`
 
-    - Call with `gulp`do a linkcheck and build
-    - Call with `gulp lint`only the lintcheck.
+    - Aufruf mit `gulp`Linkcheck und Build durchführen
+    - Rufen Sie mit `Schluckfussel` nur den Fusselscheck.
 
- ## Subcommand available:
+ ## Unterbefehl verfügbar:
 
-    - `swift:class` - Create a new class template in the Sources Directory
-        - `swift:class` `name` The new class name
-        - `swift:class` `path/name` write the template in the subdirectory
+    - `swift:class` - Erstellen Sie eine neue Klassenvorlage im Quellenverzeichnis
+        - `swift:class` `name` Der neue Klassenname
+        - `swift:class` `pfad/name` schreiben Sie die Schablone in das Unterverzeichnis
 
-## License
+## Lizenz
 
-Apache-2.0 © [Jürgen Mülbert](https:/github.com/jmuelbert/generator-swift)
+Apache-2.0 © [Jürgen Mülbert](https:/github.com/jmuelbert/generator-swift)(https:/github.com/jmuelbert/generator-swift)
 
-[Return to top](#top)
+Nach oben zurückkehren](#top)
 
 [npm-Bild]: https://badge.fury.io/js/generator-swift.svg
 [npm-url]: https://npmjs.org/package/generator-swift

@@ -1,0 +1,13 @@
+name: "Check Node/js Format"
+
+on: [push, pull_request]
+
+jobs:
+  format:
+    name: "Check Node/js Format"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "Install clang-format-9"
+        run: |
+          sudo apt-get update

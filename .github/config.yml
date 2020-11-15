@@ -10,7 +10,6 @@ requestInfoReplyComment: >
 #  - Tell me more !
 #  - I am sure you can be more effusive
 
-
 # *OPTIONAL* default titles to check against for lack of descriptiveness
 # MUST BE ALL LOWERCASE
 requestInfoDefaultTitles:

@@ -1,13 +1,57 @@
-# Contributing to jmbde-aspnet
+## Welcome!
 
-First time contributing to jmbde-aspnet ? Read our [Code of Conduct](https://github.com/jmuelbert/generator-swift/blob/master/CODE_OF_CONDUCT.md#code-of-conduct).
+You are here to help generator-swift? Awesome, feel free and read the following sections in order to know how to work on something and where to get help from. Your contribution matters a lot, generator-swift is getting better and better because of people like you. :smile:
 
-## Report a bug
+## What kinds of contributions are we looking for?
 
-* Open an issue on jmuelbert/generator-swift if it's not a formula-specific issue.
+- If you like generator-swift, star this project and share it with your friends.
+- Report bugs or request new features by [opening issues](https://github.com/jmuelbert/generator-swift/issues/new/choose). Please follow the issue templates and provide detailed information, this will help the developers to find the reason of the bug and understand what feature you are requesting for exactly.
+- Help other people in issues/pull requests/other platforms if you are able to help them.
+- Write tutorials and blogs on how to use generator-swift.
+- Improve documentation, including the Markdown files and the comments in the codes.
+- Write codes for new features or bug fixes.
 
-## Propose a feature
+## Your First Contribution
 
-* Open an issue with a detailed description of your proposed feature, the motivation for it and alternatives considered. Please note we may close this issue or ask you to create a pull-request if this is not something we see as sufficiently high priority.
+**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github). Basically, you have to fork this repository, write codes on your fork, open a pull request when you are finished, wait for reviews and apply suggestions from the maintainers.
 
-Thanks!
+**First time to developing?** There's a big difference between developing and competitive programming, but it's not hard. The source code of the generator-swift is a good example. Google for what you want to implement is usually helpful. Copy and modify the source codes if you want to implement something similar to an existing feature. If you are looking for an IDE for developing, [VS Code](https://code.visualstudio.com/) is probably a good choice.
+
+**Don't know where to start?** You can start by looking through the [issues](https://github.com/jmuelbert/generator-swift/issues) and find one you are interested in. The [good first issues](https://github.com/jmuelbert/generator-swift/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) may be suitable for you.
+
+## Before Writing Codes
+
+Please open an issue (describe the feature/bug like normal issues, and say that you are going to work on it, probably with a draft on how you would like to implement it) before writing codes for a pull request, for these reasons:
+
+1. You may get help from others.
+2. Others can know you are working on it, this will save possible duplicate works.
+3. You will be notified if this feature is not going to be accepted, or the "bug" is actually not a bug, etc., thus saving your time.
+
+## Contributing rules
+
+- Remember that the goal is to build an generator-swift for user, not for developers.
+- Do one thing in a pull request. If you want to add multiple features/fix multiple bugs and they are not relevant, open multiple pull requests. You may need to create multiple branches to open multiple pull requests, you can learn git branching [here](https://learngitbranching.js.org/).
+- Add new features on the master branch, and fix bug on the latest active (master, beta and stable) branch which has the bug.
+- Please write [clear commit messages](https://chris.beams.io/posts/git-commit/). It's also recommended to write [Conventional Commits](https://www.conventionalcommits.org/). You can use [commitizen/cz-cli](https://github.com/commitizen/cz-cli) to write commit messages. However, the rules are optional, the key is that, others and yourself in the future should understand what has been changed and why these changes are made.
+- Don't remove features unless it's necessary. Add an option to disable some feature instead.
+- Keep the settings file backward compatible all the time.
+- Windows, Linux and Mac OS should be supported.
+- Both light/dark system themes should be supported.
+- Everyone should obey the [Code of Conduct](CODE_OF_CONDUCT.md) in order to build a harassment-free community.
+
+## FAQ
+
+- Can I do it well if I've just started?
+  - Everyone knows nothing at the beginning. Don't worry, our cool contributors will help you when you meet difficulties. If you :heart: open source and keep trying, everything will be better and better.
+- Do I need to learn about CMake?
+  - No, you only need to know how to [build from source](https://github.com/jmuelbert/generator-swift).
+- Some files are missing when compiling.
+  -  If the CI tests are passed, it's probably because the submodules are updated. You can run the following commands:
+
+    ```sh
+    git add .
+    git reset --hard
+    git submodule update --init
+    ```
+
+    You can also try `git rm` all submodules and then init them again, or even delete the repo on your disk and clone again.

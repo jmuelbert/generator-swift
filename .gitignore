@@ -13,3 +13,4 @@ yarn.lock
 *.bak
 package-lock.json
 dist
+yarn.lock

@@ -1,17 +1,32 @@
 name: "CI: Build Test"
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
-  test:
-    name: Run Tests
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+  test-and-lint:
+    name: Test and lint
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.3.4
-    - name: Test
-      shell: pwsh
-      run: npm run coveralls
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: npm install
+      - run: npm run test
+        env:
+          CI: true      
+      - run: npm run lint
+      - name: coverage
+        run: |
+          npm run coverage
+          npm run report-coverage
+      - uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage.lcov
+          fail_ci_if_error: true

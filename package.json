@@ -30,7 +30,7 @@
     "eslint-config-xo-space": "^0.27.0",
     "eslint-plugin-mocha": "8.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^10.0.0",
     "handlebars": "^4.5.3",
     "jest": "^26.4.0",
     "nsp": "^3.2.1",

@@ -7,7 +7,7 @@ jobs:
     name: "Check Node/js Format"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.3.5
       - name: "Install clang-format-9"
         run: |
           sudo apt-get update

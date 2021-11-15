@@ -11,7 +11,7 @@
     "deep-extend": "^0.6.0",
     "generator-node": "^2.6.0",
     "inquirer-npm-name": "^4.0.0",
-    "lint-staged": "^11.0.0",
+    "lint-staged": "^12.0.2",
     "lodash": "^4.17.15",
     "mkdirp": "^1.0.4",
     "superb": "^4.0.0",

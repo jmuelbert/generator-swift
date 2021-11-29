@@ -7,7 +7,7 @@
     "Jürgen Mülbert < > (https://github.com/jmuelbert)"
   ],
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^5.0.0",
     "deep-extend": "^0.6.0",
     "generator-node": "^2.6.0",
     "inquirer-npm-name": "^4.0.0",

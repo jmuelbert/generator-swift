@@ -23,7 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
-    "babel-jest": "^27.0.1",
+    "babel-jest": "^28.0.1",
     "coveralls": "^3.0.4",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.1.0",

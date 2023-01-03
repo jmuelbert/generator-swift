@@ -13,7 +13,7 @@ jobs:
       with:
         source: '.'
         exclude: './lib'
-        extensions: 'h,cpp,c'
+        extensions: 'swift,js'
         clangFormatVersion: 14
         inplace: True
     - uses: EndBug/add-and-commit@v4

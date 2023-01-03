@@ -3,21 +3,22 @@
  *
  */
 
- // TODO: Add Copyright and License
+// TODO: Add Copyright and License
 
- #import Foundation
+#import Foundation
 
- /// The <%= swiftProject %>
- class <%= swiftProject %> {
-     /**
-        Initialize the <%= swiftProject %> class
+/// The <%= swiftProject %>
+class<%= swiftProject %>
+{
+    /**
+       Initialize the <%= swiftProject %> class
 
-        - Parameters:
-            - xyz:
+       - Parameters:
+           - xyz:
 
-        - Returns: A beautiful new <%= swiftProject %> class
-     */
-     init(xyz: String) {
-
-     }
- }
+       - Returns: A beautiful new <%= swiftProject %> class
+    */
+    init(xyz : String)
+    {
+    }
+}

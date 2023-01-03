@@ -1,48 +1,54 @@
-# EditorConfig is awesome: https://EditorConfig.org
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
 
-# Top-most EditorConfig file.
 root = true
 
-# -----------------
-# Source code
-# -----------------
-# C++
-# Python
-# CMake
 [*]
-end_of_line = lf
+# Change these settings to your own preference
 indent_style = space
 indent_size = 4
+
+# We recommend you to keep these unchanged
+end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[CMakeLists.txt,*.cmake{,.in}]
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
+# The indent size used in the `package.json` file cannot be changed
+# https://github.com/npm/npm/pull/3180#issuecomment-16336516
+[{*.yml,*.yaml,package.json}]
+indent_style = space
+indent_size = 2
+
+# Makefiles
+[Makefile, *.mk]
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = false
+
+[{CMakeLists.txt,*.cmake}]
+indent_style = space
+indent_size = 4
+tab_width = 4
+
+# Source code files
+[*.{c,cxx,cpp,h,hxx,hpp,java,m,mm,py,swift,xsl}]
+indent_style = space
+indent_size = 4
+tab_width = 4
+
+[*.{md,markdown}]
+indent_size = 1
+max_line_length = 128
+trim_trailing_whitespace = false
+
+[*.{sh,msx}]
 indent_size = 2
 indent_style = space
+max_line_length = 160
 
-
-[*.py]
-indent_size = 4
-
-[*.{c,h,cpp,hpp,qml,f90,F90}]
+[*.{yml,yaml}]
 indent_size = 2
-
-[*.rst]
-indent_size = 3
-tab_size = 3
-
-[Makefile]
-indent_style = tab
-
-[*.{bat,cmd}]
-end_of_line = crlf
-
-[*.js]
-indent_size = 2
-
-[*.md]
-trim_trailing_whitespace = false
+indent_style = space
+max_line_length = 160

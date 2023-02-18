@@ -1,0 +1,14 @@
+---
+name: commit-lint
+
+on: [push, pull_request]
+
+jobs:
+  commit-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ahmadnassri/action-commit-lint@v2.0.6
+        with:
+          config: .github/linters/.commit-lint.yml

@@ -1,16 +1,25 @@
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
-    "version": "0.1.0",
+    "version": "2.0.0",
     "command": "${workspaceRoot}/node_modules/.bin/babel",
-    "isShellCommand": true,
-    "showOutput": "always",
-    "suppressTaskName": true,
-    "tasks": [{
-        "taskName": "watch",
-        "args": ["src", "--out-dir", "lib", "-w", "--source-maps"],
-        "suppressTaskName": true,
-        "isBuildCommand": true,
-        "isBackground": true
-    }]
+    "tasks": [
+        {
+            "label": "watch",
+            "type": "shell",
+            "args": [
+                "src",
+                "--out-dir",
+                "lib",
+                "-w",
+                "--source-maps"
+            ],
+            "isBackground": true,
+            "problemMatcher": [],
+            "group": {
+                "_id": "build",
+                "isDefault": false
+            }
+        }
+    ]
 }

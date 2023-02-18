@@ -18,17 +18,11 @@ import Darwin
 ///
 /// - Parameters:
 ///     - name: The greeting String
-func greeting(name : String)
-{
-    print("Hello, \(name) !")
-}
+func greeting(name : String) { print("Hello, \(name) !") }
 
 /// The "Main" calls the greeting function
 if Process
-    .arguments.count != 2
-    {
-        print("Usage: hello NAME")
-    }
+  .arguments.count != 2 { print("Usage: hello NAME") }
 else {
-    let name = Process.arguments[1] greeting(name)
+  let name = Process.arguments[1] greeting(name)
 }

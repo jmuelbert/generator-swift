@@ -9,15 +9,11 @@
 /// is for:
 ///
 public
-class
-{
-    {
-        applicationName
-    }
-}
-{
-    init()
-    {
-         
-    }
+class {
+  {
+    applicationName
+  }
+} {
+  init() {
+          }
 }

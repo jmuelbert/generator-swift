@@ -33,12 +33,12 @@ module.exports = class extends Generator {
     }
 
     this.humanNameLanguage = {
-      NODE: "Node.js",
-      SWIFT: "Swift",
-      JAVA: "Java",
-      PYTHON: "Python",
-      DJANGO: "Django",
-      GO: "Go"
+      NODE : "Node.js",
+      SWIFT : "Swift",
+      JAVA : "Java",
+      PYTHON : "Python",
+      DJANGO : "Django",
+      GO : "Go"
     };
   }
 
@@ -50,11 +50,8 @@ module.exports = class extends Generator {
   prompting() {
     const prompts = [];
     if (this.builderSettings === undefined) {
-      prompts.push({
-        type: "input",
-        name: "name",
-        message: "Your project name"
-      });
+      prompts.push(
+          {type : "input", name : "name", message : "Your project name"});
     }
 
     return this.prompt(prompts).then(this._processAnswers.bind(this));
@@ -62,7 +59,7 @@ module.exports = class extends Generator {
 
   _processAnswers(answers) {
     this.builderSettings.backendPlatform =
-      answers.language || this.builderSettings.backendPlatform;
+        answers.language || this.builderSettings.backendPlatform;
     this.framework = answers.framework || this.framework;
     this.builderSettings.name = answers.name || this.builderSettings.name;
     this.nodeVersion = answers.nodeVersion || this.nodeVersion;
@@ -70,21 +67,21 @@ module.exports = class extends Generator {
 
   write() {
     switch (this.framework) {
-      case "None":
-        this._generateClass();
-        break;
-      case "Class":
-        this._generateClass();
-        break;
-      case "Console":
-        this._generateConsoleApp();
-        break;
-      case "Library":
-        this._generateLibrary();
-        break;
-      default:
-        this._generateClass();
-        break;
+    case "None":
+      this._generateClass();
+      break;
+    case "Class":
+      this._generateClass();
+      break;
+    case "Console":
+      this._generateConsoleApp();
+      break;
+    case "Library":
+      this._generateLibrary();
+      break;
+    default:
+      this._generateClass();
+      break;
     }
   }
 
@@ -93,12 +90,12 @@ module.exports = class extends Generator {
    */
   _generateClass() {
     this._writeHandlebarsFile("basic/README.md", "public/README.md", {
-      applicationName: this.builderSettings.name,
-      language: this.humanNameLanguage[this.builderSettings.backendPlatform]
+      applicationName : this.builderSettings.name,
+      language : this.humanNameLanguage[this.builderSettings.backendPlatform]
     });
     this._writeHandlebarsFile("basic/class.swift", "public/class.swift", {
-      applicationName: this.builderSettings.name,
-      language: this.humanNameLanguage[this.builderSettings.backendPlatform]
+      applicationName : this.builderSettings.name,
+      language : this.humanNameLanguage[this.builderSettings.backendPlatform]
     });
   }
 
@@ -107,12 +104,12 @@ module.exports = class extends Generator {
    */
   _generateConsoleApp() {
     this._writeHandlebarsFile("basic/README.md", "public/README.md", {
-      applicationName: this.builderSettings.name,
-      language: this.humanNameLanguage[this.builderSettings.backendPlatform]
+      applicationName : this.builderSettings.name,
+      language : this.humanNameLanguage[this.builderSettings.backendPlatform]
     });
     this._writeHandlebarsFile("basic/class.swift", "public/class.swift", {
-      applicationName: this.builderSettings.name,
-      language: this.humanNameLanguage[this.builderSettings.backendPlatform]
+      applicationName : this.builderSettings.name,
+      language : this.humanNameLanguage[this.builderSettings.backendPlatform]
     });
   }
 

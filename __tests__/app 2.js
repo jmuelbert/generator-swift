@@ -7,11 +7,11 @@ jest.mock('superb', () => () => "cat's meow");
 jest.mock('npm-name', () => () => Promise.resolve(true));
 
 const builderSettings = {
-  name: 'MyTest',
-  className: 'MyClass',
+  name : 'MyTest',
+  className : 'MyClass',
 };
 
-const requiredFilesForBasic = ['public/class.swift', 'public/README.md'];
+const requiredFilesForBasic = [ 'public/class.swift', 'public/README.md' ];
 
 describe('generator:swift', () => {
   // Basic tests
@@ -20,18 +20,13 @@ describe('generator:swift', () => {
     beforeEach(() => {
       bluemixSettings.name = 'MyClass';
 
-      return helpers
-        .run(path.join(__dirname, '../generators/app'))
-        .inTmpDir()
-        .withOptions({
-          bluemix: JSON.stringify(bluemixSettings),
-          framework: 'None'
-        });
+      return helpers.run(path.join(__dirname, '../generators/app'))
+          .inTmpDir()
+          .withOptions(
+              {bluemix : JSON.stringify(bluemixSettings), framework : 'None'});
     });
 
-    it('basic files', () => {
-      assert.file(requiredFilesForBasic);
-    });
+    it('basic files', () => { assert.file(requiredFilesForBasic); });
 
     it('starter swift app', () => {
       assert.fileContent('public/class.swift', 'public class MyClass {');
@@ -40,10 +35,9 @@ describe('generator:swift', () => {
   /*
   Describe('defaults', () => {
     beforeEach(() => {
-      return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({
-        name: 'generator-swift',
-        description: 'A swift generator',
-        homepage: 'http://github.com/jmuelbert/generator-swift',
+      return helpers.run(path.join(__dirname,
+  '../generators/app')).withPrompts({ name: 'generator-swift', description: 'A
+  swift generator', homepage: 'http://github.com/jmuelbert/generator-swift',
         githubAccount: 'jmuelbert',
         authorName: 'Jürgen Mülbert',
         authorEmail: 'juergen.muelbert@gmail.com',
@@ -74,13 +68,15 @@ describe('generator:swift', () => {
       assert.JSONFileContent('package.json', {
         name: 'generator-temp',
         dependencies: {
-          'yeoman-generator': generatorGeneratorPkg.dependencies['yeoman-generator'],
-          chalk: generatorGeneratorPkg.dependencies.chalk,
-          yosay: generatorGeneratorPkg.dependencies.yosay
+          'yeoman-generator':
+  generatorGeneratorPkg.dependencies['yeoman-generator'], chalk:
+  generatorGeneratorPkg.dependencies.chalk, yosay:
+  generatorGeneratorPkg.dependencies.yosay
         },
         devDependencies: {
           'yeoman-test': generatorGeneratorPkg.devDependencies['yeoman-test'],
-          'yeoman-assert': generatorGeneratorPkg.devDependencies['yeoman-assert']
+          'yeoman-assert':
+  generatorGeneratorPkg.devDependencies['yeoman-assert']
         },
         keywords: ['yeoman-generator']
       });

@@ -21,14 +21,16 @@ function getBaseNamespace() {
   }
 
   const projectJson = require(projectJsonPath);
-  if (projectJson && projectJson.tooling && projectJson.tooling.defaultNamespace) {
+  if (projectJson && projectJson.tooling &&
+      projectJson.tooling.defaultNamespace) {
     return projectJson.tooling.defaultNamespace;
   }
 
   const projectPath = path.resolve(path.dirname(projectJsonPath));
   let namespace = path.basename(projectPath);
   // If it ends in .Abstractions, we want the common namespace by default.
-  if (namespace.indexOf(abstractionsStr) === namespace.length - abstractionsStr.length) {
+  if (namespace.indexOf(abstractionsStr) ===
+      namespace.length - abstractionsStr.length) {
     namespace = namespace.substr(0, namespace.length - abstractionsStr.length);
   }
   return namespace;
@@ -46,11 +48,12 @@ module.exports = {
 
     const baseNamespace = getBaseNamespace(fs);
     const cwd = process.cwd();
-    const baseDirectory = path.resolve(path.dirname(this.getProjectJsonPath() || ''));
+    const baseDirectory =
+        path.resolve(path.dirname(this.getProjectJsonPath() || ''));
     const relativePath = path.relative(baseDirectory, cwd);
 
     if (relativePath) {
-      return [baseNamespace].concat(relativePath.split(path.sep)).join('.');
+      return [ baseNamespace ].concat(relativePath.split(path.sep)).join('.');
     }
 
     return baseNamespace;

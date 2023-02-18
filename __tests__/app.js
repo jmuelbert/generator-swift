@@ -10,19 +10,18 @@ jest.mock("npm-name", () => () => Promise.resolve(true));
 describe("generator:app", () => {
   describe("defaults", () => {
     beforeEach(() => {
-      return helpers
-        .run(path.join(__dirname, "../generators/app"))
-        .withPrompts({
-          name: "generator-swift",
-          description: "Yeoman generator for opensource swift projects",
-          homepage: "https://github.com/jmuelbert/generator-swift#readme",
-          githubAccount: "jmuelbert",
-          authorName: "Jürgen Mülbert",
-          authorEmail: "juergen.muelbert@gmail.com",
-          authorUrl: "https://github.com/jmuelbert",
-          keywords: [],
-          license: "Apache-2.0"
-        });
+      return helpers.run(path.join(__dirname, "../generators/app"))
+          .withPrompts({
+            name : "generator-swift",
+            description : "Yeoman generator for opensource swift projects",
+            homepage : "https://github.com/jmuelbert/generator-swift#readme",
+            githubAccount : "jmuelbert",
+            authorName : "Jürgen Mülbert",
+            authorEmail : "juergen.muelbert@gmail.com",
+            authorUrl : "https://github.com/jmuelbert",
+            keywords : [],
+            license : "Apache-2.0"
+          });
     });
 
     it("created and CD into a folder named like the generator", () => {
@@ -31,12 +30,8 @@ describe("generator:app", () => {
 
     it("creates files", () => {
       const expected = [
-        ".eslintignore",
-        "README.md",
-        "package.json",
-        "generators/app/index.js",
-        "generators/app/templates/console/main.swift",
-        "__tests__/app.js"
+        ".eslintignore", "README.md", "package.json", "generators/app/index.js",
+        "generators/app/templates/console/main.swift", "__tests__/app.js"
       ];
 
       assert.file(expected);
@@ -45,19 +40,19 @@ describe("generator:app", () => {
     it("fills package.json with correct information", () => {
       // eslint-disable-next-line new-cap
       assert.JSONFileContent("package.json", {
-        name: "generator-swift",
-        dependencies: {
-          "yeoman-generator":
-            generatorGeneratorPkg.dependencies["yeoman-generator"],
-          chalk: generatorGeneratorPkg.dependencies.chalk,
-          yosay: generatorGeneratorPkg.dependencies.yosay
+        name : "generator-swift",
+        dependencies : {
+          "yeoman-generator" :
+              generatorGeneratorPkg.dependencies["yeoman-generator"],
+          chalk : generatorGeneratorPkg.dependencies.chalk,
+          yosay : generatorGeneratorPkg.dependencies.yosay
         },
-        devDependencies: {
-          "yeoman-test": generatorGeneratorPkg.devDependencies["yeoman-test"],
-          "yeoman-assert":
-            generatorGeneratorPkg.devDependencies["yeoman-assert"]
+        devDependencies : {
+          "yeoman-test" : generatorGeneratorPkg.devDependencies["yeoman-test"],
+          "yeoman-assert" :
+              generatorGeneratorPkg.devDependencies["yeoman-assert"]
         },
-        keywords: ["yeoman-swift"]
+        keywords : [ "yeoman-swift" ]
       });
     });
 
@@ -69,8 +64,7 @@ describe("generator:app", () => {
       // assert.fileContent("README.md", "yeoman/generator-temp");
     });
 
-    it("fills the .eslintignore with correct content", () => {
-      assert.fileContent(".eslintignore", "**/templates\n");
-    });
+    it("fills the .eslintignore with correct content",
+       () => { assert.fileContent(".eslintignore", "**/templates\n"); });
   });
 });

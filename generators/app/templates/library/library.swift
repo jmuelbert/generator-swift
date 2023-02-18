@@ -8,17 +8,14 @@
 #import Foundation
 
 /// The <%= swiftProject %>
-class<%= swiftProject %>
-{
-    /**
-       Initialize the <%= swiftProject %> class
+class<%= swiftProject %> {
+  /**
+     Initialize the <%= swiftProject %> class
 
-       - Parameters:
-           - xyz:
+     - Parameters:
+         - xyz:
 
-       - Returns: A beautiful new <%= swiftProject %> class
-    */
-    init(xyz : String)
-    {
-    }
+     - Returns: A beautiful new <%= swiftProject %> class
+  */
+  init(xyz : String) {}
 }

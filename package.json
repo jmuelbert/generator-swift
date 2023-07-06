@@ -34,7 +34,7 @@
     "handlebars": "^4.5.3",
     "jest": "^29.1.1",
     "nsp": "^3.2.1",
-    "prettier": "^2.1.0",
+    "prettier": "^3.0.0",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^7.0.0"
   },

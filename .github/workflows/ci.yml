@@ -93,7 +93,7 @@ jobs:
         run: |
           npm run coverage
           npm run report-coverage
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
 
         with:
           file: ./coverage.lcov

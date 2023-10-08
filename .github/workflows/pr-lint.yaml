@@ -9,14 +9,17 @@ on:
     types:
       - opened
       - edited
-      - reopened
+      - synchronize
+
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 
 jobs:
-  lint-pr:
+  lint-pull-request-title:
     name: Lint pull request title
     runs-on: ubuntu-latest
     permissions:
@@ -24,10 +27,10 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: "🧰 Check out code"
-        uses: actions/checkout@v3
-        
+      - name: '🧰 Check out code'
+        uses: actions/checkout@v4
+
       - name: Lint pull request title
-        uses: ./
+        uses: matthiashermsen/lint-pull-request-title@v1.0.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          allowed-pull-request-types: chore,feat,fix

@@ -11,22 +11,26 @@ on:
 jobs:
   misspell-fixer:
     runs-on: ubuntu-latest
+
+    # Skip any PR created by dependabot to avoid permission issues:
+    if: (github.actor != 'dependabot[bot]')
+
     steps:
-      - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+      - name: "🧰 Check out code"
+        uses: actions/checkout@v3
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
-      - name: "Missspell fixer"
+      - name: Run Misspell Fixer
         uses: sobolevn/misspell-fixer-action@master
 
-      - name: "Check diff"
+      - name: Check for changes
         run: git diff --exit-code ${{ github.sha }}
 
-      - name: "Pull Request"
-        uses: peter-evans/create-pull-request@v5
+      - name: Create Pull Request for typos
         if: failure()
+        uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "Fix typos by misspell-fixer"
           title: "Fix typos by misspell-fixer for ${{ github.ref }}"

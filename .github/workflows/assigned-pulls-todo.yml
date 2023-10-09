@@ -19,13 +19,13 @@ jobs:
 
     steps:
       - name: Assign NEW issues and NEW pull requests to project 11
-        uses: srggrs/assign-one-project-github-action@1.2.1
+        uses: srggrs/assign-one-project-github-action@1.3.1
         if: github.event.action == 'opened'
         with:
           project: "11"
 
       - name: Assign issues and pull requests with `bug` label to project 11
-        uses: srggrs/assign-one-project-github-action@1.2.1
+        uses: srggrs/assign-one-project-github-action@1.3.1
         if: contains(github.event.pull_request.labels.*.name, 'bug')
         with:
           project: "11"

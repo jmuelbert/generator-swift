@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "🧰 Install Dependency Review Action"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: actions/dependency-review-action
           ref: v3

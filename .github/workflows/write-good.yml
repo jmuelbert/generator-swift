@@ -19,7 +19,7 @@ jobs:
     name: A job to lint Markdown files
     steps:
       - name: "🧰 Check out code"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: write-good action step
         id: write-good

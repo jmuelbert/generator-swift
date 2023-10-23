@@ -15,7 +15,7 @@
     "lodash": "^4.17.15",
     "mkdirp": "^3.0.0",
     "superb": "^4.0.0",
-    "yeoman-generator": "^5.0.1",
+    "yeoman-generator": "^7.0.0",
     "yo": "^4.2.0",
     "yosay": "^2.0.2"
   },

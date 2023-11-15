@@ -16,7 +16,7 @@
     "mkdirp": "^3.0.0",
     "superb": "^4.0.0",
     "yeoman-generator": "^7.0.0",
-    "yo": "^4.2.0",
+    "yo": "^5.0.0",
     "yosay": "^3.0.0"
   },
   "description": "Yeoman generator for opensource swift projects",

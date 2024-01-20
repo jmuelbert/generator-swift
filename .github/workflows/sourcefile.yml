@@ -42,7 +42,7 @@ jobs:
           pathSource: ./
           pathTarget: ./generator-swift-${{ steps.get_version.outputs.VERSION }}-source-all.7z
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: generator-swift-${{ steps.get_version.outputs.VERSION }}-source-all.7z
           path: generator-swift-${{ steps.get_version.outputs.VERSION }}-source-all.7z

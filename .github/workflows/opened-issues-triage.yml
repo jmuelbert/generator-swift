@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Move Issue to Triage Column
-        uses: alex-page/github-project-automation-plus@v0.8.3
+        uses: alex-page/github-project-automation-plus@v0.9.0
         with:
           project: anniversaryreminder
           column: Triage

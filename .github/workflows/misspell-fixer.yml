@@ -30,7 +30,7 @@ jobs:
 
       - name: Create Pull Request for typos
         if: failure()
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "Fix typos by misspell-fixer"
           title: "Fix typos by misspell-fixer for ${{ github.ref }}"

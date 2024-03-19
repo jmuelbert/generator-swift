@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Build and Upload Site
-        uses: withastro/action@9a7959a16949e620a22e74f81c10cb7ce3b76924 # v1.0.6
+        uses: withastro/action@acfe56dffc635abfb9506c77d51ce097030360d1 # v2.0.0
         with:
           path:
             ./pages

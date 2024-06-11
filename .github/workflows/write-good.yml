@@ -29,7 +29,7 @@ jobs:
       - name: Get the write-good output
         run: echo "${{ steps.write-good.outputs.result }}"
       - name: Post comment
-        uses: mshick/add-pr-comment@7c0890544fb33b0bdd2e59467fbacb62e028a096 # v2.8.1
+        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2.8.2
         if: ${{ steps.write-good.outputs.result }}
         with:
           message: |

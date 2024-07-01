@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: "🧰 Checkout Source Code"
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
 
       - name: Build and Upload Site
         uses: withastro/action@877fd7e5cf5dc5d213f6701c790972aa25452ad3 # v2.0.1

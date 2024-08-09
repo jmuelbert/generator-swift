@@ -46,7 +46,7 @@ jobs:
 
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.7
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
@@ -67,7 +67,7 @@ jobs:
     needs: tests
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.7
 
       - name: "Use Node version ${{matrix.node_version}}"
         uses: actions/setup-node@v4.0.3
@@ -82,7 +82,7 @@ jobs:
     needs: lint
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.7
 
       - name: "Use Node version ${{matrix.node_version}}"
         uses: actions/setup-node@v4.0.3
@@ -120,7 +120,7 @@ jobs:
     needs: tests
     steps:
       - name: "🧰 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.7
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0

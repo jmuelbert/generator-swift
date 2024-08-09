@@ -21,7 +21,7 @@ jobs:
       pull-requests: write
     steps:
       - name: "🧰 Checkout Source Code"
-        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - name: write-good action step
         id: write-good
         uses: tomwhross/write-good-action@5897a4ff597390bd521c5c3a6c062bf96147a341 # v1.6
